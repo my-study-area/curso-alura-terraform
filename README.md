@@ -23,3 +23,8 @@ chmod +x terraform ; sudo mv terraform /usr/local/bin/
 terraform -version
 ```
 
+## Anotações
+```bash
+# gera chave ssh com criptografia rsa
+ssh-keygen -f terraform-aws -t rsa
+
