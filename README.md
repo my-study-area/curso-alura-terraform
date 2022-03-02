@@ -58,4 +58,10 @@ aws --endpoint-url=http://localhost:4566 ec2 describe-instances \
 aws --endpoint-url=http://localhost:4566 ec2 describe-instances \
 --query 'Reservations[*].Instances[*].{Instance:InstanceId,Tag:Tags[*]}'
 
+# lista os security groups
+aws --endpoint-url=http://localhost:4566 ec2 describe-security-groups
+
 ```
+
+## Links
+- [Security Group](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/security_group)
