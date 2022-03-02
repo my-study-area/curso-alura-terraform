@@ -46,6 +46,9 @@ terraform apply
 # destrói a infraestrutura criada
 terraform destroy
 
+# mostra a configuração atual
+terraform show
+
 # verifica o bucket criado no localstack
 aws s3api list-buckets --query "Buckets[].Name" \
 --endpoint-url=http://localhost:4566
