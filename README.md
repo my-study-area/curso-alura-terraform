@@ -67,4 +67,6 @@ aws --endpoint-url=http://localhost:4566 ec2 describe-security-groups
 ```
 
 ## Links
+- [Providers](https://registry.terraform.io/browse/providers)
 - [Security Group](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/security_group)
+- [S3 bucket](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket)
