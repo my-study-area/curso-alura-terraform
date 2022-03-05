@@ -64,6 +64,19 @@ aws --endpoint-url=http://localhost:4566 ec2 describe-instances \
 # lista os security groups
 aws --endpoint-url=http://localhost:4566 ec2 describe-security-groups
 
+# adiciona bucket foobar
+touch /tmp/foobar
+aws --endpoint-url=http://localhost:4566 s3 mb s3://foobar
+
+# copia arquivo para o bucket
+# onde adrianoavelino-dev4 é o nome do bucket
+aws --endpoint-url=http://localhost:4566 s3 cp /tmp/foobar s3://adrianoavelino-dev4
+
+# lista os arquivos do bucket adrianoavelino-dev4
+aws --endpoint-url=http://localhost:4566 s3 ls s3://adrianoavelino-dev4
+
+# delete um arquivo do bucket adrianoavelino-dev4
+aws --endpoint-url=http://localhost:4566 s3 ls s3://adrianoavelino-dev4
 ```
 
 ## Links
