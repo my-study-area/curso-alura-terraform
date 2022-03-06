@@ -17,8 +17,8 @@ resource "aws_security_group" "acesso-ssh" {
 
 resource "aws_security_group" "acesso-ssh_us_east-2" {
   provider = aws.us_east-2
-  name        = "acesso-ssh"
-  description = "acesso-ssh"
+  name        = "acesso-ssh-us_east_2"
+  description = "acesso-ssh-us_east_2"
 
   ingress {
     from_port   = 22
