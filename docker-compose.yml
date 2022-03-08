@@ -7,6 +7,8 @@ services:
             - 4566:4566
         volumes:
             - /var/run/docker.sock:/var/run/docker.sock
+        environment:
+          - DEBUG=1
 
     terraform:
         image: hashicorp/terraform

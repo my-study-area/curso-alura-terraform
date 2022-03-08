@@ -22,6 +22,10 @@ chmod +x terraform ; sudo mv terraform /usr/local/bin/
 
 # verifica versão do terraform
 terraform -version
+
+# configura log do terraform para o terminal ativo
+export TF_LOG=TRACE
+export TF_LOG_path="terraform.txt"
 ```
 
 ## Anotações
