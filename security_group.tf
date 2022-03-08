@@ -8,7 +8,7 @@ resource "aws_security_group" "acesso-ssh" {
     protocol    = "tcp"
     # Please restrict your ingress to only necessary IPs and ports.
     # Opening to 0.0.0.0/0 can lead to security vulnerabilities.
-    cidr_blocks = ["191.32.154.79/32"]
+    cidr_blocks = var.cidrs_acesso_remoto
   }
   tags = {
     Name = "ssh"
@@ -26,7 +26,7 @@ resource "aws_security_group" "acesso-ssh_us_east-2" {
     protocol    = "tcp"
     # Please restrict your ingress to only necessary IPs and ports.
     # Opening to 0.0.0.0/0 can lead to security vulnerabilities.
-    cidr_blocks = ["191.32.154.79/32"]
+    cidr_blocks = var.cidrs_acesso_remoto
   }
   tags = {
     Name = "ssh"
