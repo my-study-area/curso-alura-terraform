@@ -123,3 +123,4 @@ ec2 describe-regions  --all-regions \
 - [DynamoDB](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/dynamodb_table)
 - [DynamoDB Commands](https://docs.aws.amazon.com/cli/latest/reference/dynamodb/index.html)
 - [Localstack Terraform](https://docs.localstack.cloud/integrations/terraform/)
+- [Input Variable](https://www.terraform.io/language/values/variables#input-variables)

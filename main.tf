@@ -73,6 +73,17 @@ resource "aws_instance" "dev6" {
   depends_on = [aws_dynamodb_table.dynamodb-homologacao]
 }
 
+resource "aws_instance" "dev7" {
+  provider = aws.us_east-2
+  ami           = var.amis["us-east-2"]
+  instance_type = "t2.micro"
+  key_name      = var.key_name
+  tags = {
+    Name = "dev7"
+  }
+  vpc_security_group_ids = ["${aws_security_group.acesso-ssh_us_east-2.id}"]
+}
+
 resource "aws_dynamodb_table" "dynamodb-homologacao" {
   provider = aws.us_east-2
   name           = "GameScores"
