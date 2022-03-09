@@ -60,6 +60,9 @@ terraform destroy
 # mostra a configuração atual
 terraform show
 
+# destrói o bucket e sua dependência
+terraform destroy -target aws_s3_bucket.dev4
+
 # verifica o bucket criado no localstack
 aws s3api list-buckets --query "Buckets[].Name" \
 --endpoint-url=http://localhost:4566
@@ -124,3 +127,5 @@ ec2 describe-regions  --all-regions \
 - [DynamoDB Commands](https://docs.aws.amazon.com/cli/latest/reference/dynamodb/index.html)
 - [Localstack Terraform](https://docs.localstack.cloud/integrations/terraform/)
 - [Input Variable](https://www.terraform.io/language/values/variables#input-variables)
+- [Backends Terraform](https://www.terraform.io/language/settings/backends)
+- [CLI Configfile](https://www.terraform.io/cli/config/config-file)
