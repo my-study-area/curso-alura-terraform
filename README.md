@@ -1,5 +1,22 @@
 # curso-alura-terraform
+<p>
+    <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/my-study-area/curso-alura-terraform">
+    <a href="https://github.com/my-study-area">
+        <img alt="Made by" src="https://img.shields.io/badge/made%20by-adriano%20avelino-gree">
+    </a>
+    <img alt="Repository size" src="https://img.shields.io/github/repo-size/my-study-area/curso-alura-terraform">
+    <a href="https://github.com/EliasGcf/readme-template/commits/master">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/my-study-area/curso-alura-terraform">
+    </a>
+</p>
+
 Curso de Terraform: Automatize a infraestrutura na nuvem
+
+Curso desenvolvido utilizando Localstack para reproduzir os serviços da AWS. Dentre os recursos utilizados estão: EC2, S3 e DynamoDB
+## Tecnologias
+- Terraform
+- Localstack (AWS)
+- Docker e docker-compose 
 
 ## Iniciando
 ```bash
