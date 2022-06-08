@@ -18,15 +18,38 @@ Curso desenvolvido utilizando Localstack para reproduzir os serviços da AWS. De
 - Localstack (AWS)
 - Docker e docker-compose 
 
-## Iniciando
+## Passos para executar o projeto
 ```bash
+# clona o projeto
+git clone https://github.com/my-study-area/curso-alura-terraform.git
+
+# entra no diretório do projeto
+cd curso-alura-terraform
+
 # inicia o localstack e o terraform
 docker-compose up -d
 
-# acessa o container com terraform
-docker-compose exec terraform sh
+# inicializa o diretório de trabalho com os arquivos de configuração
+# do Terraform
+terraform init
+
+# cria ou atualiza a infraestrutura
+terraform apply --auto-approve
+
+# lista as instâncias ecs exibindo o id da instância, tag name e state
+aws --endpoint-url=http://localhost:4566 ec2 describe-instances \
+--query 'Reservations[*].Instances[*].{Instance:InstanceId,TagName:Tags[*].Value,State:State}'
+
+# lista os security groups
+aws --endpoint-url=http://localhost:4566 ec2 describe-security-groups
+
+# verifica o bucket criado no localstack
+aws s3api list-buckets --query "Buckets[].Name" \
+--endpoint-url=http://localhost:4566
 ```
-Acesse [http://localhost:4566/health](http://localhost:4566/health) para visualizar os serviços disponíveis e a versão do localstack
+> Acesse [http://localhost:4566/health](http://localhost:4566/health) para visualizar os serviços disponíveis e a versão do localstack
+
+> Caso necessite, é possível acessar o terraform via docker através do comando `docker-compose exec terraform sh`
 
 ## Instalação do terraform localmente
 Após realizar o download do binário execute:
