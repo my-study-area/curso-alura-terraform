@@ -53,6 +53,8 @@ aws s3api list-buckets --query "Buckets[].Name" \
 
 > Caso necessite, é possível acessar o terraform via docker através do comando `docker-compose exec terraform sh`
 
+> A execução dos comandos está disponível no Youtube, no canal [Diário de um dev](https://www.youtube.com/watch?v=P9n4ukcuk68)
+
 ## Instalação do terraform localmente
 Após realizar o download do binário execute:
 ```bash
