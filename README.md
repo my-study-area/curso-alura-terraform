@@ -173,3 +173,8 @@ ec2 describe-regions  --all-regions \
 - [Input Variable](https://www.terraform.io/language/values/variables#input-variables)
 - [Backends Terraform](https://www.terraform.io/language/settings/backends)
 - [CLI Configfile](https://www.terraform.io/cli/config/config-file)
+- [Estudo básico para kubernetes (terraform)](https://github.com/my-study-area/zupedu-ninja-kubernetes)
+- Degub com terraform
+    - [Terraform Console e Outputs [Teoria]](https://www.youtube.com/watch?v=TzPjrxxadA4&ab_channel=4Zuppers)
+    - [Command: console](https://www.terraform.io/cli/commands/console)
+    - [Output Values](https://www.terraform.io/language/values/outputs)
